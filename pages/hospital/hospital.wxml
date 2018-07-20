@@ -1,0 +1,17 @@
+
+<view class="place_info"> 
+  <view>{{placeData.title}}</view> 
+  <view>{{placeData.address}}</view> 
+  <view wx:if="{{placeData.telephone=='电话：undefined'}}"> 电话：未知 </view>
+  <view wx:else> {{placeData.telephone}} </view>
+</view>    
+<view class="map_container"> 
+
+   <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+
+
+   <image src="/images/mylocate.jpg" bindtap="changetolocate" class="buttonMode,position1"></image>
+   <image src="/images/police.png" bindtap="changetopolice" class="buttonMode,position2"></image>
+   <image src="/images/firstpage.jpg" bindtap="changetoFP" class="buttonMode,position3"></image>
+  
+</view>
